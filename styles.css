@@ -1,6 +1,32 @@
-.body {
+body {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 58px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 58px;
+    right: 58px
+}
+
+.weHave {
+    position: absolute; 
+    left: 58px;
+    top: 853px; 
+}
+
+.weHave h1 {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 64px;
+    margin: 0;
 }
