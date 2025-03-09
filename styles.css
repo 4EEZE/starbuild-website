@@ -1,34 +1,48 @@
+/* desktop */
 body {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 0 58px;
+    box-sizing: border-box;
+  }
+
+/* Основные стили для hero */
+.hero {
+    flex: 1;
+    height: 900px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.logo {
+/* Стили для сетки */
+.hero .grid {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.hero .logo {
     position: absolute;
-    transform: translateX(-48%);
-    left: 50%;
-    width: 100vw;
-    z-index: 2;
+    top: 55%; 
+    left: 54%;
+    transform: translate(-50%, -50%); 
+    max-width: 1300px; 
+    height: 700; 
+    z-index: 2; 
 }
 
-.grid {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    top: 133px;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    z-index: 1;  
-}
 .weHave {
-    position: absolute; 
-    left: 58px;
-    top: 853px; 
+    flex: 1;
+    position: relative;
 }
 
 .weHave h1 {
@@ -40,6 +54,9 @@ body {
     margin: 0;
 }
 
+/* mobile */
 @media (max-width: 700px) {
-    
-}
+    .container {
+      max-width: 100%;
+    }
+  }
