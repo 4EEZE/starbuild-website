@@ -3,19 +3,28 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 0 58px;
     position: relative;
 }
 
 .logo {
     position: absolute;
-    left: 58px;
-    right: 58px
+    transform: translateX(-48%);
+    left: 50%;
+    width: 100vw;
+    z-index: 2;
 }
 
+.grid {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    top: 133px;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    z-index: 1;  
+}
 .weHave {
     position: absolute; 
     left: 58px;
@@ -30,3 +39,4 @@ body {
     font-size: 64px;
     margin: 0;
 }
+
