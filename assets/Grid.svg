@@ -1,18 +1,16 @@
-<svg width="1440" height="520" viewBox="0 0 1440 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="-2.91357" y1="519.02" x2="185.693" y2="0.828984" stroke="#0C0C0C"/>
-<line x1="185.457" y1="519.02" x2="374.064" y2="0.828984" stroke="#0C0C0C"/>
-<line x1="373.828" y1="519.02" x2="562.434" y2="0.828984" stroke="#0C0C0C"/>
-<line x1="-1379" y1="0.5" x2="809" y2="0.5" stroke="#0C0C0C"/>
-<line x1="-1379" y1="519.037" x2="809" y2="519.037" stroke="#0C0C0C"/>
-<line x1="-1379" y1="348.262" x2="809" y2="348.262" stroke="#0C0C0C"/>
-<line x1="-1379" y1="172.311" x2="809" y2="172.311" stroke="#0C0C0C"/>
-<line x1="559.49" y1="519.02" x2="748.097" y2="0.828984" stroke="#0C0C0C"/>
-<line x1="936.232" y1="519.02" x2="1124.84" y2="0.828984" stroke="#0C0C0C"/>
-<line x1="1124.6" y1="519.02" x2="1313.21" y2="0.828984" stroke="#0C0C0C"/>
-<line x1="1312.97" y1="519.02" x2="1501.58" y2="0.828984" stroke="#0C0C0C"/>
-<line x1="747.861" y1="519.02" x2="936.468" y2="0.828984" stroke="#0C0C0C"/>
-<line x1="502" y1="0.5" x2="2690" y2="0.5" stroke="#0C0C0C"/>
-<line x1="502" y1="519.037" x2="2690" y2="519.037" stroke="#0C0C0C"/>
-<line x1="502" y1="348.262" x2="2690" y2="348.262" stroke="#0C0C0C"/>
-<line x1="502" y1="172.311" x2="2690" y2="172.311" stroke="#0C0C0C"/>
+<svg width="1510" height="521" viewBox="0 0 1510 521" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="grid">
+<line id="Line 3" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 189.828 519.691)" stroke="#0C0C0C"/>
+<line id="Line 4" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 378.323 519.691)" stroke="#0C0C0C"/>
+<line id="Line 5" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 566.82 519.691)" stroke="#0C0C0C"/>
+<path id="Line 2" d="M1 519.5L189.593 1.32885" stroke="#0C0C0C"/>
+<line id="Line 6" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 755.315 519.691)" stroke="#0C0C0C"/>
+<line id="Line 7" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 1132.31 519.691)" stroke="#0C0C0C"/>
+<path id="Line 8" d="M1320.33 519.52L1509.5 0.999937" stroke="#0C0C0C"/>
+<line id="Line 10" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 943.812 519.691)" stroke="#0C0C0C"/>
+<path id="Line 11" d="M0 1.00012L1510 1.00021" stroke="#0C0C0C"/>
+<path id="Line 12" d="M0 519.5L1510 519.537" stroke="#0C0C0C"/>
+<path id="Line 13" d="M0 349L1510 348.762" stroke="#0C0C0C"/>
+<path id="Line 14" d="M0 173L1510 172.811" stroke="#0C0C0C"/>
+</g>
 </svg>

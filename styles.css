@@ -1,62 +1,43 @@
-/* desktop */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 58px;
+html {
     box-sizing: border-box;
-  }
-
-/* Основные стили для hero */
-.hero {
-    flex: 1;
-    height: 900px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
 }
 
-/* Стили для сетки */
-.hero .grid {
-    margin-top: 30px;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
 }
 
-
-.hero .logo {
-    position: absolute;
-    top: 55%; 
-    left: 54%;
-    transform: translate(-50%, -50%); 
-    max-width: 1300px; 
-    height: 700; 
-    z-index: 2; 
+body {
+    margin: 0;
 }
 
-.weHave {
-    flex: 1;
-    position: relative;
-}
-
-.weHave h1 {
+h1 {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
     font-size: 64px;
+    line-height: 1;
     margin: 0;
 }
 
-/* mobile */
-@media (max-width: 700px) {
-    .container {
-      max-width: 100%;
-    }
-  }
+.container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1516px;
+    padding-left: 58px;
+    padding-right: 58px;
+}
+
+.hero{
+    display: flex;
+    background-image: url("./assets/grid.svg");
+    background-repeat: repeat-x;
+    background-size: auto 518px;
+    background-position: center;
+}
+
+.logo {
+    padding-top: 70px;
+}
