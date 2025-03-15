@@ -63,13 +63,12 @@ ul {
 
     display: flex;
 
-    left: 50%;
-    right: 50%;
+    left: 45%;
+    
     gap: 0 5px;
     padding: 0;
     margin: 0;
-    bottom: 24px;
-
+    bottom: 23px;
     z-index: 1;
 }
 
