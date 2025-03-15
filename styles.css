@@ -19,7 +19,12 @@ h1 {
     font-style: normal;
     font-size: 64px;
     line-height: 1;
+    padding-bottom: 40px;
     margin: 0;
+}
+
+ul {
+    list-style: none;
 }
 
 .container {
@@ -36,8 +41,43 @@ h1 {
     background-repeat: repeat-x;
     background-size: auto 518px;
     background-position: center;
+
+    animation: slideBackground 20s linear infinite;
 }
 
 .logo {
     padding-top: 70px;
 }
+
+.slides img {
+    position: relative;
+    border-radius: 50px;
+}
+
+.we_have_slider {
+    position: relative;
+}
+
+.dots {
+    position: absolute;
+
+    display: flex;
+
+    left: 50%;
+    right: 50%;
+    gap: 0 5px;
+    padding: 0;
+    margin: 0;
+    bottom: 24px;
+
+    z-index: 1;
+}
+
+@keyframes slideBackground {
+    from {
+      background-position: 0;
+    }
+    to {
+      background-position: 100%;
+    }
+  }
