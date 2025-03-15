@@ -37,7 +37,7 @@ ul {
 
 .hero{
     display: flex;
-    background-image: url("./assets/grid.svg");
+    background-image: url("/assets/grid.svg");
     background-repeat: repeat-x;
     background-size: auto 518px;
     background-position: center;
@@ -52,10 +52,15 @@ ul {
 .slides img {
     position: relative;
     border-radius: 50px;
+
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .we_have_slider {
     position: relative;
+
+    animation: we_have_slider 35s ease-in-out infinite;
 }
 
 .dots {
@@ -69,8 +74,11 @@ ul {
     padding: 0;
     margin: 0;
     bottom: 23px;
-    z-index: 1;
+
+    transition: opacity 0.3s ease-in-out;
 }
+
+
 
 @keyframes slideBackground {
     from {
