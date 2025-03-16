@@ -1,0 +1,16 @@
+<svg width="1510" height="521" viewBox="0 0 1510 521" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="grid">
+<line id="Line 3" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 189.828 519.691)" stroke="#0C0C0C"/>
+<line id="Line 4" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 378.323 519.691)" stroke="#0C0C0C"/>
+<line id="Line 5" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 566.82 519.691)" stroke="#0C0C0C"/>
+<path id="Line 2" d="M1 519.5L189.593 1.32885" stroke="#0C0C0C"/>
+<line id="Line 6" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 755.315 519.691)" stroke="#0C0C0C"/>
+<line id="Line 7" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 1132.31 519.691)" stroke="#0C0C0C"/>
+<path id="Line 8" d="M1320.33 519.52L1509.5 0.999937" stroke="#0C0C0C"/>
+<line id="Line 10" y1="-0.5" x2="551.491" y2="-0.5" transform="matrix(0.34222 -0.93962 0.939766 0.34182 943.812 519.691)" stroke="#0C0C0C"/>
+<path id="Line 11" d="M0 1.00012L1510 1.00021" stroke="#0C0C0C"/>
+<path id="Line 12" d="M0 519.5L1510 519.537" stroke="#0C0C0C"/>
+<path id="Line 13" d="M0 349L1510 348.762" stroke="#0C0C0C"/>
+<path id="Line 14" d="M0 173L1510 172.811" stroke="#0C0C0C"/>
+</g>
+</svg>

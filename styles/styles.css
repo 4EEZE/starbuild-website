@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 1;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding-left: 58px;
+  padding-right: 58px;
+}
+
+.hero {
+  display: flex;
+  background-image: url("/assets/Grid.svg");
+  background-repeat: repeat-x;
+  background-size: auto 518px;
+  background-position: center;
+
+  animation: slideBackground 20s linear infinite;
+}
+
+.logo img {
+  padding-top: 70px;
+  width: 100%;
+}
+
+@keyframes slideBackground {
+  from {
+    background-position: -100%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
