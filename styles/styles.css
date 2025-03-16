@@ -1,90 +1,86 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 h1 {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 64px;
-    line-height: 1;
-    padding-bottom: 40px;
-    margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 1;
+  padding-bottom: 40px;
+  margin: 0;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .container {
-    display: flex;
-    margin: 0 auto;
-    max-width: 1516px;
-    padding-left: 58px;
-    padding-right: 58px;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding-left: 58px;
+  padding-right: 58px;
 }
 
-.hero{
-    display: flex;
-    background-image: url("/assets/grid.svg");
-    background-repeat: repeat-x;
-    background-size: auto 518px;
-    background-position: center;
+.hero {
+  display: flex;
+  background-image: url("/assets/Grid.svg");
+  background-repeat: repeat-x;
+  background-size: auto 518px;
+  background-position: center;
 
-    animation: slideBackground 20s linear infinite;
+  animation: slideBackground 20s linear infinite;
 }
 
-.logo {
-    padding-top: 70px;
+.logo img {
+  padding-top: 70px;
+  width: 100%;
 }
 
 .slides img {
-    position: relative;
-    border-radius: 50px;
-
-    overflow: hidden;
-    transition: opacity 0.3s ease-in-out;
+  position: relative;
+  border-radius: 50px;
+  width: 100%;
 }
 
 .we_have_slider {
-    position: relative;
-
-    animation: we_have_slider 35s ease-in-out infinite;
+  position: relative;
 }
 
 .dots {
-    position: absolute;
+  position: absolute;
 
-    display: flex;
+  display: flex;
 
-    left: 45%;
-    
-    gap: 0 5px;
-    padding: 0;
-    margin: 0;
-    bottom: 23px;
+  gap: 0 5px;
+  padding: 0;
+  margin-inline: auto;
+  bottom: 5px;
 
-    transition: opacity 0.3s ease-in-out;
+  left: 0;
+  right: 0;
+
+  width: fit-content;
 }
 
-
-
 @keyframes slideBackground {
-    from {
-      background-position: 0;
-    }
-    to {
-      background-position: 100%;
-    }
+  from {
+    background-position: -100%;
   }
+  to {
+    background-position: 100%;
+  }
+}
