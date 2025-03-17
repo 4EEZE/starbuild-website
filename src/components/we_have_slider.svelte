@@ -64,7 +64,8 @@
         transition: opacity 0.3s ease-in-out;
     }
 
-    .we_have_slider {
+
+    :global(.we_have_slider) {
         position: relative;
         width: 100%;
         height: 700px;
