@@ -17,6 +17,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--подключаем yandex maps api
+    https://yandex.ru/maps-api/docs/js-api/common/quickstart.html
+    -->
+    <script src="https://api-maps.yandex.ru/v3/?apikey=██████API_KEY_HERE██████&lang=ru_RU"></script>
+    <script type="module">
+        import mapStyle from '/src/assets/customization.json';
+        initMap();
+
+        async function initMap() {
+            await ymaps3.ready;
+        
+            const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+        
+            const map = new YMap(
+                document.getElementById('map'),
+                {
+                    location: {
+                        center: [48.744294, 55.746338],
+                        zoom: 15.5
+                    }
+                }
+            );
+
+            map.addChild(new YMapDefaultSchemeLayer({
+                customization: mapStyle
+            }));
+        }
+    </script>
 </head>
 
 <body>
@@ -45,6 +74,7 @@
                 <div class="section__h1">
                     <h1>Локации проектов</h1>
                 </div>
+                <div id="map"></div>                 
             </section>
         </div>
     </main>

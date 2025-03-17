@@ -19,7 +19,6 @@
       ++Counter;
     }
 
-    console.log(Counter);
   }, 5300);
 
   onDestroy(() => clearInterval(intervalId));

@@ -60,6 +60,19 @@ ul {
   margin-top: 80px;
 }
 
+#map {
+  width: 764px;
+  height: 659px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+}
+
+/* ymaps */
+canvas {
+  border-radius: 50px;
+}
+
 @keyframes slideBackground {
   from {
     background-position: -100%;
