@@ -20,6 +20,8 @@
 
     <!--подключаем yandex maps api
     https://yandex.ru/maps-api/docs/js-api/common/quickstart.html
+
+    ██████API_KEY_HERE██████
     -->
     <script src="https://api-maps.yandex.ru/v3/?apikey=██████API_KEY_HERE██████&lang=ru_RU"></script>
     <script type="module">
@@ -29,21 +31,69 @@
         async function initMap() {
             await ymaps3.ready;
         
-            const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+            const {YMap, YMapDefaultSchemeLayer,YMapDefaultFeaturesLayer, YMapMarker} = ymaps3;
         
             const map = new YMap(
                 document.getElementById('map'),
                 {
                     location: {
-                        center: [48.744294, 55.746338],
-                        zoom: 15.5
+                        center: [48.743763, 55.745509],
+                        zoom: 15.4
                     }
                 }
             );
 
+            //слои дороги и маркеров
             map.addChild(new YMapDefaultSchemeLayer({
                 customization: mapStyle
             }));
+            map.addChild(new YMapDefaultFeaturesLayer());
+            
+            const content = document.createElement('marker');
+            const content1 = document.createElement('marker');
+            const content2 = document.createElement('marker');
+
+            //инициализация маркеров
+            const marker = new YMapMarker(
+              {
+                coordinates: [48.750215, 55.746834],
+                draggable: false,
+                offset: [-27.5, -27.5],
+              }
+              ,
+              content
+            );
+
+            const marker1 = new YMapMarker(
+              {
+                coordinates: [48.744296, 55.750220],
+                draggable: false,
+                offset: [-27.5, -27.5],
+              }
+              ,
+              content1
+            );
+
+            const marker2 = new YMapMarker(
+              {
+                coordinates: [48.738961, 55.741549],
+                draggable: false,
+                offset: [-27.5, -27.5],
+              }
+              ,
+              content2
+            );
+            
+          
+            // Добавление маркера на карту
+            map.addChild(marker);
+            map.addChild(marker1);
+            map.addChild(marker2);
+          
+            // Добавление разметки внутрь маркера
+            content.innerHTML = '<img src="/assets/marker.svg" alt="marker">';
+            content1.innerHTML = '<img src="/assets/marker.svg" alt="marker">';
+            content2.innerHTML = '<img src="/assets/marker.svg" alt="marker">';
         }
     </script>
 </head>
