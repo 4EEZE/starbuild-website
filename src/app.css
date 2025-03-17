@@ -50,6 +50,15 @@ ul {
   width: 100%;
 }
 
+.we_have {
+  width: 100%;
+  max-width: 1400px;
+}
+
+.projects {
+  margin-top: 80px;
+}
+
 @keyframes slideBackground {
   from {
     background-position: 0;

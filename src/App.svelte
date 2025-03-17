@@ -1,9 +1,9 @@
 <script lang="ts">
-  import Counter from "./components/we_have_slider.svelte"
+  //import Counter from "./components/we_have_slider.svelte"
 </script>
 
 <main>
-  <Counter />
+  <!--<Counter />-->
 </main>
 
 <style>

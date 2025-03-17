@@ -25,44 +25,41 @@
     onDestroy(() => clearInterval(intervalId));
 </script>
   
-<main>
-    <div class="container">
-        <div class="we_have_slider">
-            <div class="slides">
-              {#key Counter}
-                <div class="slide">
-                  <img 
-                    in:fade={{ duration: 300 }}
-                    out:fade={{ duration: 900 }}
-                    src={Images[Counter]}
-                    alt="Slide {Counter}"
-                  />
-                </div>
-              {/key}
-            </div>
-            <ul class="dots">
-                <li class="dot_0">
-                    <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 0 ? 1 : 0.5}>
-                </li>
-                <li class="dot_1">
-                    <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 1 ? 1 : 0.5}>
-                </li>
-                <li class="dot_2">
-                    <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 2 ? 1 : 0.5}>
-                </li>
-                <li class="dot_3">
-                    <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 3 ? 1 : 0.5}>
-                </li>
-                <li class="dot_4">
-                    <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 4 ? 1 : 0.5}>
-                </li>
-                <li class="dot_5">
-                    <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 5 ? 1 : 0.5}>
-                </li>
-            </ul> 
+
+<div class="we_have_slider">
+    <div class="slides">
+      {#key Counter}
+        <div class="slide">
+          <img 
+            in:fade={{ duration: 300 }}
+            out:fade={{ duration: 900 }}
+            src={Images[Counter]}
+            alt="Slide {Counter}"
+          />
         </div>
+      {/key}
     </div>
-</main>
+    <ul class="dots">
+        <li class="dot_0">
+            <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 0 ? 1 : 0.5}>
+        </li>
+        <li class="dot_1">
+            <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 1 ? 1 : 0.5}>
+        </li>
+        <li class="dot_2">
+            <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 2 ? 1 : 0.5}>
+        </li>
+        <li class="dot_3">
+            <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 3 ? 1 : 0.5}>
+        </li>
+        <li class="dot_4">
+            <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 4 ? 1 : 0.5}>
+        </li>
+        <li class="dot_5">
+            <img src="/src/assets/dot_active.svg" alt="dot" style:opacity={Counter === 5 ? 1 : 0.5}>
+        </li>
+    </ul> 
+</div>
 
 <style>
 
@@ -70,7 +67,8 @@
         transition: opacity 0.3s ease-in-out;
     }
 
-    .we_have_slider {
+
+    :global(.we_have_slider) {
         position: relative;
         width: 100%;
     }
@@ -78,7 +76,7 @@
     .slides {
         position: relative;
         height: 700px;
-        overflow: hidden;
+        width: 100%;
     }
 
     .slide {
@@ -113,7 +111,6 @@
       width: 100%;
       border-radius: 50px;
       max-width: 1400px;
-      max-height: 700px;
       transition: opacity 0.3s ease-in-out;
     }
 </style>
