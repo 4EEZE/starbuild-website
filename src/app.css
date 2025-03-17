@@ -30,14 +30,15 @@ ul {
 .container {
   display: flex;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1440px;
   padding-left: 58px;
   padding-right: 58px;
+  flex-direction: column;
 }
 
 .hero {
   display: flex;
-  background-image: url("./assets/Grid.svg");
+  background-image: url("/assets/Grid.svg");
   background-repeat: repeat-x;
   background-size: auto 518px;
   background-position: center;
@@ -52,7 +53,7 @@ ul {
 
 @keyframes slideBackground {
   from {
-    background-position: 0;
+    background-position: -100%;
   }
   to {
     background-position: 100%;
