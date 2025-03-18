@@ -108,6 +108,9 @@ button {
 
   border-radius: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 .project {
@@ -123,6 +126,8 @@ button {
   margin: 9px;
 
   overflow: hidden;
+
+  transition: background-color 0.3s ease-in-out;
 }
 
 .project_info {
@@ -176,6 +181,12 @@ button {
   background-color: white;
 
   transition: all 0.3s ease-in-out;
+}
+
+/*:has() МОЖЕТ НЕ РАБОТАТЬ В СТАРЫХ БРУЗЕРАХ*/
+.project:has(.project_info button:hover) {
+  background-color: rgb(238, 238, 238);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .project img {
