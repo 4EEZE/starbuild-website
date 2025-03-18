@@ -200,6 +200,37 @@ button {
   object-fit: cover;
 }
 
+.promote {
+  margin-bottom: 150px;
+}
+
+.fade_black img{
+  width: 100%;
+}
+
+.banner {
+  background-image: url("/src/assets/innopolis_1.png");
+  background-color: black;
+  background-size: auto 120%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  height: 457px;
+
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+
+/*
+.promote h1 {
+  background-image: url('/src/assets/innopolis_gradient.gif');
+  background-size: 110% auto;
+  background-position: 10% 10%;
+  background-clip: text;
+  color: transparent;
+}
+*/
+
 /* ymaps */
 canvas {
   border-radius: 50px;
