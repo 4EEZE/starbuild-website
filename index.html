@@ -91,9 +91,9 @@
             map.addChild(marker2);
           
             // Добавление разметки внутрь маркера
-            content.innerHTML = '<img src="/assets/marker.svg" alt="marker">';
-            content1.innerHTML = '<img src="/assets/marker.svg" alt="marker">';
-            content2.innerHTML = '<img src="/assets/marker.svg" alt="marker">';
+            content.innerHTML = '<img src="/src/assets/marker.svg" alt="marker">';
+            content1.innerHTML = '<img src="/src/assets/marker.svg" alt="marker">';
+            content2.innerHTML = '<img src="/src/assets/marker.svg" alt="marker">';
         }
     </script>
 </head>
@@ -124,7 +124,20 @@
                 <div class="section__h1">
                     <h1>Локации проектов</h1>
                 </div>
-                <div id="map"></div>                 
+                <div class="projects_content">
+                    <div id="map"></div>
+                    <div class="project_list">
+                        <div class="project">
+                            <img src="src/assets/starfall.png" alt="starfall">
+                            <div class="project_info">
+                                <h2>Starfall</h2>
+                                <p>ул. Спортивная</p>
+                                <h3>от 2,5 млн ₽</h3>
+                                <button>ПОДРОБНЕЕ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>             
             </section>
         </div>
     </main>

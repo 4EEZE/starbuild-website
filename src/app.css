@@ -10,11 +10,12 @@ html {
 
 body {
   margin: 0;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 }
 
 h1 {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
   font-size: 64px;
@@ -23,8 +24,32 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1;
+  margin: 0;
+}
+
+h3 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 1;
+  margin: 0;
+}
+
 ul {
   list-style: none;
+}
+
+button {
+  font-weight: 800;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  margin: 0;
 }
 
 .container {
@@ -38,7 +63,7 @@ ul {
 
 .hero {
   display: flex;
-  background-image: url("/assets/Grid.svg");
+  background-image: url("/src/assets/Grid.svg");
   background-repeat: repeat-x;
   background-size: auto 518px;
   background-position: center;
@@ -58,6 +83,7 @@ ul {
 
 .projects {
   margin-top: 80px;
+  margin-bottom: 40px;
 }
 
 #map {
@@ -66,6 +92,101 @@ ul {
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
+}
+
+.projects_content {
+  display:flex;
+
+  flex-direction: row;
+}
+
+.project_list {
+  height: 659px;
+  width: 540px;
+
+  margin-left: 20px;
+
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+
+  width: 522px;
+  height: 285px;
+
+  border-radius: 40px;
+  background-color: rgb(245, 245, 245);
+
+  margin: 9px;
+
+  overflow: hidden;
+}
+
+.project_info {
+  margin-left: 20px;
+  margin-top: 42px;
+  margin-right: 27px;
+  margin-bottom: 14px;
+
+  display: flex;
+  flex-direction: column;
+
+  max-width: 277px;
+  max-height: 285px;
+}
+
+.project_info p {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+
+  color: rgb(140, 140, 140);
+}
+
+.project_info h3 {
+  margin-left: 22px;
+  margin-top: 27px;
+
+  color: rgb(140, 140, 140);
+}
+
+.project_info button {
+  margin-top: 38px;
+
+  width: 245px;
+  height: 76px;
+
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(0, 81, 255);
+  color: white;
+
+  transition: 
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.project_info button:hover {
+  color: rgb(0, 81, 255);
+  background-color: white;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.project img {
+  display: flex;
+  flex-direction: row;
+  height: 285px;
+  max-width: 245px;
+
+  border-radius: 0 30px 30px 0;
+
+  object-fit: cover;
 }
 
 /* ymaps */
