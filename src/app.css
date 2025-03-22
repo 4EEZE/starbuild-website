@@ -33,9 +33,17 @@ h2 {
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 800;
   font-style: normal;
   font-size: 32px;
+  line-height: 1;
+  margin: 0;
+}
+
+h4 {
+  font-weight: 800;
+  font-style: normal;
+  font-size: 36px;
   line-height: 1;
   margin: 0;
 }
@@ -209,7 +217,286 @@ a, a:hover, a:visited {
   position: relative;
 }
 
+.fade_black {
+  z-index: 1;
+  position: relative;
+}
 
+.fade_black img {
+  height: 100%;
+  max-height: 1324px;
+}
+
+#banner {
+  background-color: black;
+  background-size: auto 120%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  height: 457px;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner_info {
+  margin-top: 62px;
+  margin-left: 50px;
+  top: 0px;
+  position: absolute;
+  z-index: 2;
+}
+
+.banner_info p {
+  max-width: 420px;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 64px;
+  line-height: auto;
+  color: white;
+  margin: 0;
+}
+
+.innopolis_href {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  margin-top: 40px;
+}
+
+.introduction:hover img {
+  animation: rotateBounce 0.4s ease-in-out forwards;
+}
+
+.introduction:not(:hover) img {
+  animation: rotateBounceBack 0.4s ease-in-out forwards;
+}
+
+.innopolis_href img {
+  margin-left: 15px;
+  transition: transform 0.3s cubic-bezier(0.68, -1, 0.32, 2);
+  transform-origin: center;
+  width: 22px;
+}
+
+.innopolis_href p {
+  background-image: url("/src/assets/innopolis_gradient.gif");
+  background-clip: text;
+  background-size: 110% auto;
+  background-position: 10% 25%;
+  color: transparent;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: row;
+}
+
+.action {
+  position: relative;
+  max-width: 180px;
+}
+
+.action p {
+  font-size: 24px;
+  height: auto;
+  background-size: 200% auto;
+  background-position: 10% 10%;
+}
+
+.action img {
+  position: absolute;
+  margin: 0;
+  width: 220px;
+  top: -15px;
+  left: -19px;
+}
+
+/* Анимация для поворота и покачивания */
+@keyframes rotateBounce {
+  0% {
+      transform: rotate(0);
+  }
+  40% {
+      transform: rotate(50deg);
+  }
+  60% {
+      transform: rotate(40deg);
+  }
+  80% {
+      transform: rotate(47deg);
+  }
+  100% {
+      transform: rotate(45deg);
+  }
+}
+
+/* Анимация для возврата в исходное положение */
+@keyframes rotateBounceBack {
+  0% {
+      transform: rotate(45deg);
+  }
+  40% {
+      transform: rotate(-5deg);
+  }
+  60% {
+      transform: rotate(2deg);
+  }
+  80% {
+      transform: rotate(-3deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+/* Новые стили для контейнера и изображений */
+.video-container {
+  top: 0;
+  right: 0;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 110%;
+}
+
+.competition_banner {
+  position: relative;
+
+  background-color: black;
+  border-radius: 50px;
+  height: 529px;
+
+  background-image: url("/src/assets/promote_background.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+
+.competition_info {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.label {
+  display: flex;
+  
+  font-weight: 900;
+  font-style: normal;
+  font-size: 64px;
+  line-height: normal;  
+  margin-left: 55px;
+  color: white;
+
+  align-items: center;
+
+  max-width: 540px;
+}
+
+.label span {
+  vertical-align: -13px;
+  margin-left: 5px;
+}
+
+.competition_banner object {
+  top: 52px;
+  position: absolute;
+  right: 28px;
+}
+
+footer h3 {
+  margin-top: 125px;
+  margin-bottom: 40px;
+}
+
+.refs {
+  display: flex;
+  flex-direction: row;
+
+  max-height: 125px;
+  max-width: 565px;
+}
+
+.refs img {
+  margin-right: 20px;
+
+  height: 125px;
+  width: 125px;
+}
+
+.questions {
+  position: relative;
+
+  top: 40px;
+}
+
+.main_info {
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  max-width: 672px;
+  max-height: 127px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.info img {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.info p {
+  position: sticky;
+
+  font-weight: 800;
+  font-style: normal;
+  font-size: 36px;
+  line-height: normal;  
+  color: black;
+
+  margin: 0;
+}
+
+.warning {
+  margin-top: 100px;
+  display: flex;
+  margin-bottom: 40px;
+
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.warning p {
+  font-weight: 800;
+  font-style: normal;
+  font-size: 36px;
+  line-height: normal;  
+  color: black;
+}
+
+.warning img {
+  margin: 20px;
+}
 
 /*
 .promote h1 {
