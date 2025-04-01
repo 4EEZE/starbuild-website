@@ -1,4 +1,4 @@
-![STARBUILD](/readme.png)
+![STARBUILD](https://raw.githubusercontent.com/4EEZE/starbuild-website/refs/heads/main/static/readme.png)
 
 # sv
 
