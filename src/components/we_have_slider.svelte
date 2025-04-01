@@ -4,12 +4,12 @@
 
   let Counter = $state(0);
   const Images = [
-    "./src/assets/noise.svg",
-    "./src/assets/home.svg",
-    "./src/assets/internet.svg",
-    "./src/assets/space.svg",
-    "./src/assets/power.svg",
-    "./src/assets/gym.svg",
+    "/home.svg",
+    "/noise.svg",
+    "/internet.svg",
+    "/space.svg",
+    "/power.svg",
+    "/gym.svg",
   ];
 
   const intervalId = setInterval(() => {
@@ -38,42 +38,42 @@
   <ul class="dots">
     <li class="dot_0">
       <img
-        src="/src/assets/dot_active.svg"
+        src="/dot_active.svg"
         alt="dot"
         style:opacity={Counter === 0 ? 1 : 0.5}
       />
     </li>
     <li class="dot_1">
       <img
-        src="/src/assets/dot_active.svg"
+        src="/dot_active.svg"
         alt="dot"
         style:opacity={Counter === 1 ? 1 : 0.5}
       />
     </li>
     <li class="dot_2">
       <img
-        src="/src/assets/dot_active.svg"
+        src="/dot_active.svg"
         alt="dot"
         style:opacity={Counter === 2 ? 1 : 0.5}
       />
     </li>
     <li class="dot_3">
       <img
-        src="/src/assets/dot_active.svg"
+        src="/dot_active.svg"
         alt="dot"
         style:opacity={Counter === 3 ? 1 : 0.5}
       />
     </li>
     <li class="dot_4">
       <img
-        src="/src/assets/dot_active.svg"
+        src="/dot_active.svg"
         alt="dot"
         style:opacity={Counter === 4 ? 1 : 0.5}
       />
     </li>
     <li class="dot_5">
       <img
-        src="/src/assets/dot_active.svg"
+        src="/dot_active.svg"
         alt="dot"
         style:opacity={Counter === 5 ? 1 : 0.5}
       />
