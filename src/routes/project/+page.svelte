@@ -1,5 +1,15 @@
 <script>
     //ДИЗАЙНЫ ПРОЕКТОВ https://www.desivis.ru/
+    import { Confetti } from "svelte-confetti";
+    import { tick } from "svelte";
+
+    let active = $state(false);
+
+    async function confetti() {
+      active = false;
+      await tick();
+      active = true;
+    }
 
     let count = $state(100);
 
@@ -10,6 +20,11 @@
       else {
         count += 0;
       };
+    }
+
+    function handleCLick() {
+      confetti();
+      increacment();
     }
 </script>
 
@@ -32,16 +47,29 @@
           нейтральные цвета. Даже вашему котику понравиться!
         </p>
         <div class="book_button">
-          <button onclick={increacment}>ЗАБРОНИРОВАТЬ</button>
+          <button onclick={handleCLick}>ЗАБРОНИРОВАТЬ</button>
+          <!--https://mitcheljager.github.io/svelte-confetti/-->
+          <div class="confetti">
+            {#if active}
+            <Confetti fallDistance=50px amount=100 delay={[0, 500]} colorArray={["#256AFF", "#FFFFFF", "#0051FF", "url(/star1.png)"]} x={[-1, 1]} y={[-1, 1]}/>
+            <Confetti fallDistance=5px amount=50 delay={[0, 250]} colorArray={["url(/star1.png)", "url(/star2.png)", "url(/star3.png)"]} x={[-1.5, 1.5]} y={[-1.5, 1.5]}/>
+            {/if}
+          </div>
           <span class="book_stat"> {count} из 203 </span>
         </div>
       </div>
     </div>
 </header>
 
-<main style="display: flex; padding:0 58px">
-  <div class="isometric_building">
-    <img src="/Starfall_isometric_plan.webp" alt="isometric building">
+<main style="padding:0 58px">
+  <div class="building_schemes">
+    <img src="/starfall_isometric_plan.webp" alt="isometric building">
+    <img src="/apartment_plan_starfall.webp" alt="apartment scheme">
+  </div>
+  <div class="design_aspects">
+    <div class="design_aspects_card"></div>
+    <div class="design_aspects_card"></div>
+    <div class="design_aspects_card"></div>
   </div>
 </main>
 
@@ -57,11 +85,12 @@
     max-height: 807px; */
 
     background-image: url("/dark_starfall.png"), url("/starfall_deco.svg");
+
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-blend-mode: overlay;
-    border-radius: 0 0 50px 50px;
+    /*border-radius: 0 0 50px 50px;*/
     height: 100vh;
     overflow: hidden;
   }
@@ -77,24 +106,28 @@
   }
 
   .book_button {
+    box-sizing: border-box  ;
     max-width: 410px;
-    border-radius: 30px;
-    border: 1px rgba(0, 81, 255, 1) solid;
+    border-radius:30px;
+    height: auto;
+    padding: 0;
+    position: relative;
+
+    outline: 1px rgba(0, 81, 255, 1) solid;
     margin-top: 20px;
-    transition: border 0.3s ease-in-out;
+    transition: outline 0.3s ease-in-out;
   }
 
   .book_button button {
     cursor: pointer;
     padding: 0;
-    line-height: 1;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    width: 240px;
-    height: 76px;
+    width: 239px;
+    height: 75px;
 
     border: none;
     border-radius: 30px;
@@ -114,8 +147,8 @@
   }
 
   .book_button:has(button:hover) {
-    border: 1px white solid;
-    transition: border 0.3s ease-in-out;
+    outline: 1px white solid;
+    transition: outline 0.3s ease-in-out;
   }
 
   .book_stat {
@@ -125,12 +158,48 @@
     margin-left: 20px;
   }
 
-  .isometric_building {
+  .building_schemes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
     width: 100%;
     margin: 0 auto;
   }
 
-  .isometric_building img {
+  .building_schemes img {
     width: 100%;
   }
+
+  .building_schemes img:nth-child(2) {  
+    padding-top: 100px;
+    width: 50%;
+  }
+
+  .design_aspects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    
+  }
+
+  .design_aspects_card {
+    padding: 10px 10px 0;
+    width: 100%;
+    height: 320px;
+    background-color: rgba(245, 245, 245, 1);
+    border-radius: 40px;
+  }
+
+  .confetti {
+    position: absolute;
+    left: 27%;
+    bottom: 50%;
+  }
+
 </style>
