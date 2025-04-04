@@ -3,6 +3,9 @@
     import { Confetti } from "svelte-confetti";
     import { tick } from "svelte";
 
+    import { Canvas } from '@threlte/core'
+    import Scene from "../../components/Scene.svelte";
+
     let active = $state(false);
 
     async function confetti() {
@@ -51,12 +54,15 @@
           <!--https://mitcheljager.github.io/svelte-confetti/-->
           <div class="confetti">
             {#if active}
-            <Confetti fallDistance=50px amount=100 delay={[0, 500]} colorArray={["#256AFF", "#FFFFFF", "#0051FF", "url(/star1.png)"]} x={[-1, 1]} y={[-1, 1]}/>
-            <Confetti fallDistance=5px amount=50 delay={[0, 250]} colorArray={["url(/star1.png)", "url(/star2.png)", "url(/star3.png)"]} x={[-1.5, 1.5]} y={[-1.5, 1.5]}/>
+            <Confetti fallDistance=50px amount={200} delay={[0, 500]} colorArray={["#256AFF", "#FFFFFF", "#0051FF", "url(/star1.png)"]} x={[-1, 1]} y={[-1, 1]}/>
+            <Confetti fallDistance=100px amount={100} delay={[0, 250]} colorArray={["url(/star1.png)", "url(/star2.png)", "url(/star3.png)"]} x={[-1.5, 1.5]} y={[-1.5, 1.5]}/>
             {/if}
           </div>
           <span class="book_stat"> {count} из 203 </span>
         </div>
+      </div>
+      <div class="scroll_arrow">
+        <img src="/scroll_arrow.svg" alt="scroll">
       </div>
     </div>
 </header>
@@ -67,10 +73,16 @@
     <img src="/apartment_plan_starfall.webp" alt="apartment scheme">
   </div>
   <div class="design_aspects">
-    <div class="design_aspects_card"></div>
-    <div class="design_aspects_card"></div>
-    <div class="design_aspects_card"></div>
+    <div class="design_aspects_card">
+      <img src="/starfall_2.png" alt="starfall room">
+      <div class="options">
+        
+      </div>
+    </div>
   </div>
+  <Canvas>
+    <Scene />
+  </Canvas>
 </main>
 
 
@@ -158,6 +170,20 @@
     margin-left: 20px;
   }
 
+  .scroll_arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px) ;}
+    60% {transform: translateY(-5px);}
+  }
+
   .building_schemes {
     display: flex;
     align-items: center;
@@ -177,6 +203,29 @@
   }
 
   .design_aspects {
+    margin-top: 90px;
+    max-width: 100vw;
+  }
+
+  .design_aspects_card {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .design_aspects_card img {
+    border-radius: 50px;
+    width: 100%;
+    aspect-ratio: 876/482;
+  }
+
+  .options {
+    border-radius: 50px;
+    aspect-ratio: 428/482;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+  /*
+  .design_aspects {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -195,11 +244,11 @@
     background-color: rgba(245, 245, 245, 1);
     border-radius: 40px;
   }
+  */
 
   .confetti {
     position: absolute;
     left: 27%;
     bottom: 50%;
   }
-
 </style>

@@ -23,7 +23,11 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@threlte/core": "^8.0.1",
+		"@threlte/extras": "^9.1.0",
+		"@types/three": "^0.175.0",
 		"dotenv": "^16.4.7",
-		"i": "^0.3.7"
+		"i": "^0.3.7",
+		"three": "^0.175.0"
 	}
 }
