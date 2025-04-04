@@ -7,6 +7,7 @@
     import Scene from "../../components/Scene.svelte";
 
     let active = $state(false);
+    let active_options = $state(false);
 
     async function confetti() {
       active = false;
@@ -76,7 +77,16 @@
     <div class="design_aspects_card">
       <img src="/starfall_2.png" alt="starfall room">
       <div class="options">
-        
+        {#if active_options}
+          <div class="options_card"></div>
+          <div class="options_card"></div>
+          <div class="options_card"></div>
+          <div class="options_card"></div>
+        {/if}
+        <div class="innactive">
+          <img src="/plus.svg" alt="add option">
+          <h4>ДОБАВИТЬ ОПЦИЮ</h4>
+        </div>
       </div>
     </div>
   </div>
@@ -221,8 +231,30 @@
 
   .options {
     border-radius: 50px;
+    min-width: 428px;
+    min-height: 482px;
     aspect-ratio: 428/482;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .innactive {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    aspect-ratio: 428/482;
+    height: 100%;
+  }
+
+  .innactive img {
+    max-height: 58px;
+    max-width: 58px;
+  }
+
+  .innactive h4 {
+    font-size: 24px;
+    color: rgba(206, 206, 206, 1);
+    margin-top: 25px;
   }
   /*
   .design_aspects {
