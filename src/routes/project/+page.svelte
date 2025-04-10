@@ -1,13 +1,14 @@
-<script>
+<script lang="ts">
     //ДИЗАЙНЫ ПРОЕКТОВ https://www.desivis.ru/
     import { Confetti } from "svelte-confetti";
     import { tick } from "svelte";
+    import { blur } from "svelte/transition";
 
-    import { Canvas } from '@threlte/core'
+    import { Canvas } from '@threlte/core';
     import Scene from "../../components/Scene.svelte";
 
     let active = $state(false);
-    let active_options = $state(false);
+    let active_options = $state(0);
 
     async function confetti() {
       active = false;
@@ -29,6 +30,13 @@
     function handleCLick() {
       confetti();
       increacment();
+    }
+
+
+    function ui_steps(buttonName: string) {
+      if (buttonName === "options_button") {
+        active_options += 1;
+      }
     }
 </script>
 
@@ -75,24 +83,48 @@
   </div>
   <div class="design_aspects">
     <div class="design_aspects_card">
-      <img src="/starfall_2.png" alt="starfall room">
+      <div class="image_wrapper">
+        <img src="/starfall_2.png" alt="starfall room">
+      </div>
       <div class="options">
-        {#if active_options}
-          <div class="options_card"></div>
-          <div class="options_card"></div>
-          <div class="options_card"></div>
-          <div class="options_card"></div>
-        {/if}
-        <div class="innactive">
+        {#if active_options === 0}
+        <button class="options_button" aria-label="add option button" onclick={() => ui_steps('options_button')} 
+          in:blur={{ duration: 300, amount:10}} 
+          out:blur={{ duration:300, amount:10}}
+          >
           <img src="/plus.svg" alt="add option">
           <h4>ДОБАВИТЬ ОПЦИЮ</h4>
+        </button>
+        {:else if active_options === 1}
+        <div class="options_cards"
+        in:blur={{ duration: 600, amount:10}} 
+        out:blur={{ duration:300, amount:10}}
+        >
+          <div class="options_card">
+            <Canvas>
+              <Scene />
+            </Canvas>
+          </div>
+          <div class="options_card">
+            <Canvas>
+              <Scene />
+            </Canvas>
+          </div>
+          <div class="options_card">
+            <Canvas>
+              <Scene />
+            </Canvas>
+          </div>
+          <div class="options_card">
+            <Canvas>
+              <Scene />
+            </Canvas>
+          </div>
         </div>
+        {/if}
       </div>
     </div>
   </div>
-  <Canvas>
-    <Scene />
-  </Canvas>
 </main>
 
 
@@ -213,49 +245,90 @@
   }
 
   .design_aspects {
-    margin-top: 90px;
-    max-width: 100vw;
+    margin-top: 100px;
+    
   }
 
   .design_aspects_card {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 20px;
+  }
+
+  .image_wrapper {
     width: 100%;
   }
 
-  .design_aspects_card img {
+  .image_wrapper img {
     border-radius: 50px;
+    
     width: 100%;
-    aspect-ratio: 876/482;
+    height: 100%;
   }
 
   .options {
+    aspect-ratio: 428 / 482;
+    width: 49%;
     border-radius: 50px;
-    min-width: 428px;
-    min-height: 482px;
-    aspect-ratio: 428/482;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    position: relative;
   }
 
-  .innactive {
+  .options_button {
     justify-content: center;
     flex-direction: column;
     align-items: center;
     display: flex;
-    aspect-ratio: 428/482;
     height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
   }
 
-  .innactive img {
-    max-height: 58px;
-    max-width: 58px;
+  .options_button img {
+    max-height: 116px;
+    max-width: 116px;
   }
 
-  .innactive h4 {
-    font-size: 24px;
+  .options_button h4 {
+    font-size: 36px;
     color: rgba(206, 206, 206, 1);
     margin-top: 25px;
+    text-align: center;
   }
+
+  .options_cards {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .options_card {
+    flex: 1 1 calc(50% - 10px); /* Основное изменение */
+    border-radius: 40px;
+    height: 100%;
+    width: 100%;
+    
+    background-color: rgba(206, 206, 206, 1);
+  }
+
+
+  /*
+  .canvas_container {
+    
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+    */
+
   /*
   .design_aspects {
     display: flex;
@@ -283,4 +356,6 @@
     left: 27%;
     bottom: 50%;
   }
+
+
 </style>

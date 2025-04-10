@@ -374,6 +374,7 @@
     background-size: 110% auto;
     background-position: 10% 25%;
     color: transparent;
+    cursor: pointer;
   }
 
   .introduction {
@@ -514,7 +515,7 @@
     height: 125px;
     width: 125px;
   }
-
+  
   .questions {
     position: relative;
 

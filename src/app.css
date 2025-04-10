@@ -62,6 +62,7 @@ button {
 
 a, a:hover, a:visited {
   all: unset;
+  cursor: pointer;
 }
 
 .container {
@@ -84,8 +85,8 @@ a, a:hover, a:visited {
 /* ymaps */
 canvas {
   border-radius: 50px;
-
 }
+
 marker {
   top: -27.5px;
   left: -27.5px;

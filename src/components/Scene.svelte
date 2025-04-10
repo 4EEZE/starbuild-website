@@ -3,7 +3,6 @@
   import { T, useTask } from '@threlte/core'
   import { interactivity } from '@threlte/extras';
   import { Spring } from 'svelte/motion';
-  import { DirectionalLight } from 'three';
 
   interactivity()
   const scale = new Spring(1)
@@ -17,7 +16,6 @@
     rotation += speed
     x_rotation += x_speed
   })
-
 </script>
 
 <!--https://threlte.xyz/-->
