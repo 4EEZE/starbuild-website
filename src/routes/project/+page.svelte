@@ -246,7 +246,6 @@
 
   .design_aspects {
     margin-top: 100px;
-    
   }
 
   .design_aspects_card {
@@ -302,23 +301,24 @@
 
   .options_cards {
     overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
     padding: 10px;
     height: 100%;
     width: 100%;
   }
 
   .options_card {
-    flex: 1 1 calc(50% - 10px); /* Основное изменение */
     border-radius: 40px;
     height: 100%;
-    width: 100%;
     
     background-color: rgba(206, 206, 206, 1);
+    min-width: 0px;
+    min-height: 0px;
   }
-
 
   /*
   .canvas_container {
