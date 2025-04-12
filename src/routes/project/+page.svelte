@@ -102,23 +102,39 @@
         >
           <div class="options_card">
             <Canvas>
-              <Scene />
+              <Scene model = {"/server_model/scene.gltf"}/>
             </Canvas>
+            <div class="options_card_buttons">
+              <button class="option_card_add_button" aria-label="add option"><img src="/plus_white.svg" alt="add"></button>
+              <button class="option_card_info_button" aria-label="info button"><img src="/info.svg" alt="info"></button>
+            </div>
           </div>
           <div class="options_card">
             <Canvas>
-              <Scene />
+              <Scene model = {"/yandex_station_model/scene.gltf"}/>
             </Canvas>
+            <div class="options_card_buttons">
+              <button class="option_card_add_button" aria-label="add option"><img src="/plus_white.svg" alt="add"></button>
+              <button class="option_card_info_button" aria-label="info button"><img src="/info.svg" alt="info"></button>
+            </div>
           </div>
           <div class="options_card">
             <Canvas>
-              <Scene />
+              <Scene model = {"/vacuum_robot_model.gltf"}/>
             </Canvas>
+            <div class="options_card_buttons">
+              <button class="option_card_add_button" aria-label="add option"><img src="/plus_white.svg" alt="add"></button>
+              <button class="option_card_info_button" aria-label="info button"><img src="/info.svg" alt="info"></button>
+            </div>
           </div>
           <div class="options_card">
             <Canvas>
-              <Scene />
+              <Scene model = {"/buff_steve_model/scene.gltf"}/>
             </Canvas>
+            <div class="options_card_buttons">
+              <button class="option_card_add_button" aria-label="add option"><img src="/plus_white.svg" alt="add"></button>
+              <button class="option_card_info_button" aria-label="info button"><img src="/info.svg" alt="info"></button>
+            </div>
           </div>
         </div>
         {/if}
@@ -312,13 +328,103 @@
   }
 
   .options_card {
+    position: relative;
     border-radius: 40px;
     height: 100%;
     
-    background-color: rgba(206, 206, 206, 1);
+    
+    background-color: rgba(245, 245, 245, 1);
     min-width: 0px;
     min-height: 0px;
   }
+
+  .option_card_add_button {
+    position: absolute;
+    width: calc(100% - 20px);
+    height: fit-content;
+    bottom: 0;
+    border-radius: 30px;
+    margin: 10px;
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: rgba(0, 81, 255, 1);
+    border: none;
+    cursor: pointer;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    padding: 0;
+  }
+
+  .option_card_add_button img{
+    margin: 10px;
+  }
+
+  .options_card:hover .option_card_add_button {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .options_card_buttons:hover .option_card_add_button {
+    width: calc(100% - 86px);
+  }
+
+  .option_card_add_button:hover + .option_card_info_button,
+  .option_card_info_button:hover {
+    visibility: visible;
+    opacity: 1;
+    background-color: white;
+  }
+
+  .option_card_add_button:hover + .option_card_info_button img {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .option_card_info_button:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .option_card_info_button {
+    height: 92px;
+    width: calc(100% - 20px);
+    text-align: right;
+    left: 0;
+    bottom: 0;
+    margin: 10px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    outline: 1px solid rgba(0, 81, 255, 1);
+  }
+
+  .options_card_buttons:hover .option_card_info_button img,
+  .option_card_info_button:hover img {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .options_card_buttons {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .option_card_info_button img {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  
 
   /*
   .canvas_container {
@@ -355,7 +461,13 @@
     position: absolute;
     left: 27%;
     bottom: 50%;
+    pointer-events: none;
   }
 
+  .options_card :global {
+    canvas {
+      border-radius: 40px;
+    }
+  }
 
 </style>

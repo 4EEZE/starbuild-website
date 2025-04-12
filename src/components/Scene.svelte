@@ -1,52 +1,26 @@
-<script>
-  
-  import { T, useTask } from '@threlte/core'
-  import { interactivity } from '@threlte/extras';
-  import { Spring } from 'svelte/motion';
+<script lang="ts">
+  //https://threlte.xyz/docs/reference/extras/gltf
 
-  interactivity()
-  const scale = new Spring(1)
+  import { T } from '@threlte/core'
+  import { Environment, GLTF, OrbitControls } from '@threlte/extras'
 
-  let rotation = 0
-  let speed = 0.001
-  let x_rotation = 0
-  let x_speed = 0
-
-  useTask(() => {
-    rotation += speed
-    x_rotation += x_speed
-  })
+  let { model } = $props()
 </script>
 
-<!--https://threlte.xyz/-->
-<T.PerspectiveCamera 
-    makeDefault
-    position={[10, 10, 10]}
-    oncreate={(ref) => {
-        ref.lookAt(0, 1, 0)
-    }}
-/>
+<Environment url="/shanghai_riverside_2k.hdr" />
 
-<T.DirectionalLight position={[0, 10, 10]}/>
-
-<T.Mesh
-  rotation.y = {rotation}
-  rotation.x = {x_rotation}
-  scale = {scale.current}
-  onpointerenter={() => {
-    scale.target = 2
-    speed = 0.01
-    x_speed = 0.01
-  }}
-
-  onpointerleave={() => {
-    scale.target = 1
-    speed = 0.001
-    x_speed = 0
-    x_rotation = 0
-  }}
+<T.PerspectiveCamera
+  makeDefault
+  position={[10, 4, 0]}
+  fov={25}
 >
-  <T.BoxGeometry args={[3, 3, 3]}/>
-  <T.MeshBasicMaterial color="rgba(0, 81, 255, 1)"/>
-  <T.MeshStandardMaterial color="rgba(0, 81, 255, 1)" />
-</T.Mesh>
+  <OrbitControls
+    autoRotate
+    enableDamping
+    noZoom
+  />
+</T.PerspectiveCamera>
+
+<T.AmbientLight />
+
+<GLTF url={ model } />

@@ -1,0 +1,11 @@
+Model Information:
+* title:	DZ_YANDEX [XYZ SCHOOL]
+* source:	https://sketchfab.com/3d-models/dz-yandex-xyz-school-902bb8cc97c340e8aaac0775fb5c3611
+* author:	savixnx (https://sketchfab.com/savixnx)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "DZ_YANDEX [XYZ SCHOOL]" (https://sketchfab.com/3d-models/dz-yandex-xyz-school-902bb8cc97c340e8aaac0775fb5c3611) by savixnx (https://sketchfab.com/savixnx) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

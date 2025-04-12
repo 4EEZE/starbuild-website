@@ -1,0 +1,11 @@
+Model Information:
+* title:	Buff steve
+* source:	https://sketchfab.com/3d-models/buff-steve-02a60661cf5a4bda9b7021ad0b2b6075
+* author:	NovaNinja (https://sketchfab.com/NovaNinja)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Buff steve" (https://sketchfab.com/3d-models/buff-steve-02a60661cf5a4bda9b7021ad0b2b6075) by NovaNinja (https://sketchfab.com/NovaNinja) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
