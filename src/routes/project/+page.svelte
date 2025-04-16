@@ -6,6 +6,7 @@
 
     import { Canvas } from '@threlte/core';
     import Scene from "../../components/Scene.svelte";
+    import ProjectClickSlider from "../../components/Project_click_slider.svelte";
 
     let active = $state(false);
     let active_options = $state(0);
@@ -22,9 +23,7 @@
       if (count != 203) {
         count += 1;
       }
-      else {
-        count += 0;
-      };
+
     }
 
     function handleCLick() {
@@ -62,7 +61,7 @@
           <button onclick={handleCLick}>ЗАБРОНИРОВАТЬ</button>
           <!--https://mitcheljager.github.io/svelte-confetti/-->
           <div class="confetti">
-            {#if active}
+            {#if active && count != 203}
             <Confetti fallDistance=50px amount={200} delay={[0, 500]} colorArray={["#256AFF", "#FFFFFF", "#0051FF", "url(/star1.png)"]} x={[-1, 1]} y={[-1, 1]}/>
             <Confetti fallDistance=100px amount={100} delay={[0, 250]} colorArray={["url(/star1.png)", "url(/star2.png)", "url(/star3.png)"]} x={[-1.5, 1.5]} y={[-1.5, 1.5]}/>
             {/if}
@@ -141,10 +140,108 @@
       </div>
     </div>
   </div>
+  <ProjectClickSlider />
 </main>
 
+<footer style="padding: 200px 58px 100px;">
+  <h4>Остались вопросы?</h4>
+  <div class="info_contacts">
+    <div class="contact_links">
+      <a href="https://discord.com/" target="_blank"
+        ><img src="/dis_blue.svg" alt="discord" /></a
+      >
+      <a href="https://telegram.org/" target="_blank"
+        ><img src="/tg_blue.svg" alt="telegram" /></a
+      >
+      <a href="https://vk.com" target="_blank"
+        ><img src="/vk_blue.svg" alt="VKontakte" /></a
+      >
+      <a href="https://mail.yandex.ru/" target="_blank"
+        ><img src="/mail.svg" alt="Email" /></a
+      >
+    </div>
+    <div class="additional_info">
+      <span class="info">
+        <img src="/divider.svg" alt="divider" />
+        <p>С ВАМИ 10 ЛЕТ!</p>
+        <img src="/divider.svg" alt="divider" />
+        <p>10 тыс. КВАРТИР</p>
+        <img src="/divider.svg" alt="divider" />
+        <p>В 10 ГОРОДАХ</p>
+      </span>
+    </div>
+  </div>
+  <div class="disclaimer">
+    <img src="/warning.svg" alt="warning sign">
+    <p>
+      Этот сайт является учебным проектом и создан исключительно в  образовательных целях. 
+      Упомянутая строительная компания не существует, а все данные, включая контактную информацию, проекты и отзывы, являются  вымышленными. 
+      Любое сходство с реальными компаниями или лицами случайно.
+    </p>
+  </div>
+</footer>
 
-<style>
+
+<style> 
+  .contact_links img {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .disclaimer {
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+  }
+
+  .disclaimer img {
+    margin: 30px;
+  }
+
+  .disclaimer p {
+    font-weight: 800;
+    font-style: normal;
+    font-size: 36px;
+    line-height: normal;
+    color: black;
+    text-align: left;
+    align-self: center;
+    padding: 10px 10px 10px 0px;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+
+  .info_contacts {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .additional_info .info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info p {
+    font-weight: 800;
+    font-style: normal;
+    font-size: 36px;
+    line-height: normal;
+    color: black;
+
+    margin: 0;
+  }
+
+  .info img {
+    padding: 0px 20px;
+  }
+
+
   .hero {
     margin: 0 auto;
     display: flex;
@@ -467,6 +564,7 @@
   .options_card :global {
     canvas {
       border-radius: 40px;
+      cursor: grab;
     }
   }
 
