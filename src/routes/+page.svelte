@@ -42,7 +42,7 @@
               <h2>Starfall</h2>
               <p>ул. Спортивная</p>
               <h3>от 2,5 млн ₽</h3>
-              <a href="/project"><button>ПОДРОБНЕЕ</button></a>
+              <a href="/starfall"><button>ПОДРОБНЕЕ</button></a>
             </div>
           </div>
           <div class="project">
@@ -51,7 +51,7 @@
               <h2>Celestial</h2>
               <p>ул. Спортивная</p>
               <h3>от 3,0 млн ₽</h3>
-              <button>ПОДРОБНЕЕ</button>
+              <a href="/celestial"><button>ПОДРОБНЕЕ</button></a>
             </div>
           </div>
           <div class="project">
@@ -60,7 +60,7 @@
               <h2>Stardrop</h2>
               <p>ул. Центральная</p>
               <h3>от 2,7 млн ₽</h3>
-              <button>ПОДРОБНЕЕ</button>
+              <a href="/stardrop"><button>ПОДРОБНЕЕ</button></a>
             </div>
           </div>
         </div>
