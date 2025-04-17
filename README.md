@@ -8,16 +8,14 @@
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Creating a project
+## Cloning repo
 
 If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-# create a new project in the current directory
-npx sv create
+git clone https://github.com/4EEZE/starbuild-website
 
-# create a new project in my-app
-npx sv create my-app
+cd starbuild-website
 ```
 
 ## Developing
