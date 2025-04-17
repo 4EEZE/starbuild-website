@@ -3,6 +3,9 @@
 </svelte:head>
 
 <script>
+  //Долженн быть импортирован хотя бы в один компонент
+  import '../app.css';
+
   import Slider from "../components/We_have_slider.svelte";
   import Map from "../components/Map.svelte";
 </script>

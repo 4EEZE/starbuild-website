@@ -1,4 +1,5 @@
 <script>
+    import '../app.css';
     import { page } from '$app/state';
 </script>
 
@@ -149,7 +150,7 @@
         width: 100%;
         border-radius: 50px;
         transition: all 0.3s ease-in-out;
-        outline: 1px white solid;
+        outline: 3px white solid;
     }
 
     .wallpaper_bonus p {
