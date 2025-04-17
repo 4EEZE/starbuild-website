@@ -1,5 +1,9 @@
 ![STARBUILD](https://raw.githubusercontent.com/4EEZE/starbuild-website/refs/heads/main/static/readme.png)
 
+# Figma
+
+[`View design`](https://www.figma.com/design/8QKsuByeoxFSqnfdloLCaD/siteProt?node-id=35-47&t=I3L6TKJCqaEGcfrk-1)
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).

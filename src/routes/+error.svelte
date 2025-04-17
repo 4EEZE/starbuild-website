@@ -1,4 +1,5 @@
 <script>
+    import { page } from '$app/state';
 </script>
 
 <svelte:head>
@@ -21,9 +22,9 @@
                 user@starbuild:~$ cd /requested/page<br>
                 bash: cd: /requested/page: No such file or directory<br>
                 <br>
-                user@starbuild:~$ 404 --help<br>
+                user@starbuild:~$ {page.status} --help<br>
                 ---------------------------------<br>
-                404 ERROR - PAGE NOT FOUND<br>
+                {page.status} ERROR - {page.error?.message}<br>
                 <br>
                 > Try one of these:<br>
                 * Return to home: `navigate --home`<br>
@@ -36,7 +37,7 @@
         </div>
         <div class="wallpaper_bonus" style="padding: 0 58px; padding-top: 100px;">
             <h1 style="color: white;">Упс...</h1>
-            <p style="color: white;">Ничего страшного, такое бывает. В подарок возьми наши авторские обои для твоего ПК! </p>
+            <p style="color: white;">Ничего страшного, такое бывает. В подарок возьми наши авторские обои для своего ПК! </p>
             <p style="color: gray; margin-bottom: 100px;">(Файл .xfc и все исходники также включены в архив)</p>
             <img src="/wallpapers.png" alt="wallpapers" class="wallpaper">
             <a href="https://github.com/4EEZE/starbuild-website" target="_blank">
