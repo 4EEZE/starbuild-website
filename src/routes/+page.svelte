@@ -45,7 +45,7 @@
               <h2>Starfall</h2>
               <p>ул. Спортивная</p>
               <h3>от 2,5 млн ₽</h3>
-              <a href="/starfall"><button>ПОДРОБНЕЕ</button></a>
+              <a href="/starfall">ПОДРОБНЕЕ</a>
             </div>
           </div>
           <div class="project">
@@ -54,7 +54,7 @@
               <h2>Celestial</h2>
               <p>ул. Спортивная</p>
               <h3>от 3,0 млн ₽</h3>
-              <a href="/celestial"><button>ПОДРОБНЕЕ</button></a>
+              <a href="/celestial">ПОДРОБНЕЕ</a>
             </div>
           </div>
           <div class="project">
@@ -63,7 +63,7 @@
               <h2>Stardrop</h2>
               <p>ул. Центральная</p>
               <h3>от 2,7 млн ₽</h3>
-              <a href="/stardrop"><button>ПОДРОБНЕЕ</button></a>
+              <a href="/stardrop">ПОДРОБНЕЕ</a>
             </div>
           </div>
         </div>
@@ -263,10 +263,18 @@
     color: rgb(140, 140, 140);
   }
 
-  .project_info button {
+  .project_info a {
+    display: flex;
     cursor: pointer;
     padding: 0;
-    margin-top: 38px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 800;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
 
     width: 245px;
     height: 76px;
@@ -281,7 +289,7 @@
       background-color 0.3s ease-in-out;
   }
 
-  .project_info button:hover {
+  .project_info a:hover {
     color: rgb(0, 81, 255);
     background-color: white;
 
@@ -289,7 +297,7 @@
   }
 
   /*:has() МОЖЕТ НЕ РАБОТАТЬ В СТАРЫХ БРУЗЕРАХ*/
-  .project:has(.project_info button:hover) {
+  .project:has(.project_info a:hover) {
     background-color: rgb(238, 238, 238);
     transition: background-color 0.3s ease-in-out;
   }
