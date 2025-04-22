@@ -183,13 +183,21 @@
         background-size: auto 60vh;
         background-position: center;
         background-position: background_slide;
+        overflow: hidden;
+        max-width: 100wv;
 
         animation: slideBackground 60s linear infinite;
     }
 
     .logo img {
-        padding-top: 70px;
-        width: 100%;
+        margin-top: 3%;
+        height: 100%;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
     }
 
     .we_have {
