@@ -21,6 +21,34 @@
             </div>
         </div>
     </div>
+    <div class="scroll_indicator">
+        <svg
+            width="30"
+            height="29"
+            viewBox="0 0 30 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <line
+                x1="2.272"
+                y1="14.3224"
+                x2="14.9999"
+                y2="27.0503"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+            />
+            <line
+                x1="15"
+                y1="27.0503"
+                x2="27.7279"
+                y2="14.3224"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+            />
+        </svg>
+    </div>
 </header>
 
 <main>
@@ -176,7 +204,34 @@
 </foorter>
 
 <style>
+    @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    .scroll_indicator {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+        animation: bounce 2s infinite;
+    }
+
     .hero {
+        position: relative;
         display: flex;
         background-image: url("/Grid.svg");
         background-repeat: repeat-x;
