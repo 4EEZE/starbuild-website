@@ -161,48 +161,6 @@
     </div>
 </main>
 
-<foorter>
-    <div class="container">
-        <section class="questions">
-            <h4>Остались вопросы?</h4>
-            <div class="main_info">
-                <div class="refs">
-                    <a href="https://discord.com/" target="_blank"
-                        ><img src="/dis_blue.svg" alt="discord" /></a
-                    >
-                    <a href="https://telegram.org/" target="_blank"
-                        ><img src="/tg_blue.svg" alt="telegram" /></a
-                    >
-                    <a href="https://vk.com" target="_blank"
-                        ><img src="/vk_blue.svg" alt="VKontakte" /></a
-                    >
-                    <a href="https://mail.yandex.ru/" target="_blank"
-                        ><img src="/mail.svg" alt="Email" /></a
-                    >
-                </div>
-                <span class="info">
-                    <img src="/divider.svg" alt="divider" />
-                    <p>С ВАМИ 10 ЛЕТ!</p>
-                    <img src="/divider.svg" alt="divider" />
-                    <p>10 тыс. КВАРТИР</p>
-                    <img src="/divider.svg" alt="divider" />
-                    <p>В 10 ГОРОДАХ</p>
-                </span>
-            </div>
-            <div class="warning">
-                <img src="/warning.svg" alt="warning" />
-                <p>
-                    Этот сайт является учебным проектом и создан исключительно в
-                    образовательных целях. Упомянутая строительная компания не
-                    существует, а все данные, включая контактную информацию,
-                    проекты и отзывы, являются вымышленными. Любое сходство с
-                    реальными компаниями или лицами случайно.
-                </p>
-            </div>
-        </section>
-    </div>
-</foorter>
-
 <style>
     @keyframes bounce {
         0%,
