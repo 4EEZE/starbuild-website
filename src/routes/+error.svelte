@@ -73,51 +73,73 @@
         </div>
     </main>
 
-    <footer style="padding: 200px 58px 100px;">
-        <h4 style="color: white;">Остались вопросы?</h4>
-        <div class="info_contacts">
-            <div class="contact_links">
-                <a
-                    href="https://discord.com/"
-                    target="_blank"
-                    aria-label="discord link"
-                >
-                    <img src="dis_white.svg" alt="discord" />
-                </a>
-                <a
-                    href="https://telegram.org/"
-                    target="_blank"
-                    aria-label="telegram link"
-                >
-                    <img src="tg_white.svg" alt="telegram" />
-                </a>
-                <a href="https://vk.com" target="_blank" aria-label="vk link">
-                    <img src="/vk_white.svg" alt="vk" />
-                </a>
-                <a
-                    href="https://mail.yandex.ru/"
-                    target="_blank"
-                    aria-label="email link"
-                >
-                    <img src="/mail_white.svg" alt="email" />
-                </a>
+    <footer>
+        <div class="contact_info_and_disclaimer">
+            <div class="achievements_and_contact_info_wrapper">
+                <div class="contact_info">
+                    <a
+                        href="https://discord.com/"
+                        target="_blank"
+                        aria-label="disocrd_contact"
+                    >
+                        <img src="/dis_white.svg" alt="discord logo" />
+                    </a>
+                    <a
+                        href="https://telegram.org"
+                        target="_blank"
+                        aria-label="telegram_contact"
+                    >
+                        <img src="/tg_white.svg" alt="telegram logo" />
+                    </a>
+                    <a
+                        href="https://vk.com"
+                        target="_blank"
+                        aria-label="vk contact"
+                    >
+                        <img src="/vk_white.svg" alt="vk logo" />
+                    </a>
+                    <a
+                        href="https://workspace.google.com/intl/ru/gmail/"
+                        target="_blank"
+                        aria-label="gmail contact"
+                    >
+                        <img src="/mail_white.svg" alt="gmail logo" />
+                    </a>
+                </div>
+                <div class="achievements">
+                    <div>
+                        <span
+                            ><img
+                                src="/divider_white.svg"
+                                alt="section divider"
+                            /></span
+                        >
+                        С ВАМИ<br />10 ЛЕТ!
+                    </div>
+                    <div>
+                        <span
+                            ><img
+                                src="/divider_white.svg"
+                                alt="section divider"
+                            /></span
+                        >
+                        >10 тыс.<br />КВАРТИР
+                    </div>
+                    <div>
+                        <span
+                            ><img
+                                src="/divider_white.svg"
+                                alt="section divider"
+                            /></span
+                        >
+                        В 10<br />ГОРОДАХ
+                    </div>
+                </div>
             </div>
-            <div class="additional_info">
-                <span class="info">
-                    <img src="/divider_white.svg" alt="divider" />
-                    <p>С ВАМИ 10 ЛЕТ!</p>
-                    <img src="/divider_white.svg" alt="divider" />
-                    <p>10 тыс. КВАРТИР</p>
-                    <img src="/divider_white.svg" alt="divider" />
-                    <p>В 10 ГОРОДАХ</p>
-                </span>
-            </div>
-        </div>
-        <div class="disclaimer">
-            <path>
+            <div class="disclaimer">
                 <svg
-                    width="272"
-                    height="268"
+                    width="auto"
+                    height="100%"
                     viewBox="0 0 272 268"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -130,14 +152,14 @@
                         stroke-linejoin="round"
                     />
                 </svg>
-            </path>
-            <p>
-                Этот сайт является учебным проектом и создан исключительно в
-                образовательных целях. Упомянутая строительная компания не
-                существует, а все данные, включая контактную информацию, проекты
-                и отзывы, являются вымышленными. Любое сходство с реальными
-                компаниями или лицами случайно.
-            </p>
+                <p>
+                    Этот сайт является учебным проектом и создан исключительно в
+                    образовательных целях. Упомянутая строительная компания не
+                    существует, а все данные, включая контактную информацию,
+                    проекты и отзывы, являются вымышленными. Любое сходство с
+                    реальными компаниями или лицами случайно.
+                </p>
+            </div>
         </div>
     </footer>
 </div>
@@ -264,64 +286,65 @@
         animation: bounce 2s infinite;
     }
 
-    .contact_links img {
-        margin-right: 20px;
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
+    footer {
+        margin-top: 200px;
+        padding: 0 58px;
 
-    .disclaimer {
-        border-radius: 50px;
-        outline: 3px white solid;
-        display: flex;
-    }
-
-    .disclaimer svg {
-        margin: 30px;
-    }
-
-    .disclaimer p {
-        font-weight: 800;
-        font-style: normal;
-        font-size: 36px;
-        line-height: normal;
-        color: black;
-        text-align: left;
-        align-self: center;
-        padding: 10px 10px 10px 0px;
-        hyphens: auto;
-        overflow-wrap: break-word;
-        text-overflow: ellipsis;
         color: white;
+        font-weight: 800;
+        padding-bottom: 100px;
     }
 
-    .info_contacts {
-        margin-top: 20px;
-        margin-bottom: 80px;
+    .contact_info {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .achievements_and_contact_info_wrapper {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        margin-bottom: 100px;
+    }
+
+    .achievements {
+        font-weight: 800;
+        font-size: 36px;
+        display: flex;
+        margin-left: auto;
+    }
+
+    .achievements div {
+        display: flex;
         align-items: center;
     }
 
-    .additional_info .info {
+    .achievements span {
+        margin-left: 40px;
+        margin-right: 20px;
+    }
+
+    .disclaimer {
         display: flex;
         flex-direction: row;
+        outline: white solid 3px;
+        border-radius: 50px;
         justify-content: center;
         align-items: center;
     }
 
-    .info p {
-        font-weight: 800;
-        font-style: normal;
-        font-size: 36px;
-        line-height: normal;
-        color: white;
-
-        margin: 0;
+    .disclaimer svg {
+        height: 100%;
+        margin: 30px;
     }
 
-    .info img {
-        padding: 0px 20px;
+    .disclaimer p {
+        margin-left: auto;
+        font-size: 36px;
+        margin: 15px;
+        hyphens: auto;
+        overflow-wrap: break-word;
+        text-overflow: ellipsis;
     }
 </style>

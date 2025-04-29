@@ -1,100 +1,102 @@
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
-  margin: 0;
+    margin: 0;
 
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
 }
 
 h1 {
-  font-weight: 900;
-  font-style: normal;
-  font-size: 64px;
-  line-height: 1;
-  padding-bottom: 40px;
-  margin: 0;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 64px;
+    line-height: 1;
+    padding-bottom: 40px;
+    margin: 0;
 }
 
 h2 {
-  font-weight: 500;
-  font-style: normal;
-  font-size: 48px;
-  line-height: 1;
-  margin: 0;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 1;
+    margin: 0;
 }
 
 h3 {
-  font-weight: 800;
-  font-style: normal;
-  font-size: 32px;
-  line-height: 1;
-  margin: 0;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 1;
+    margin: 0;
 }
 
 h4 {
-  font-weight: 800;
-  font-style: normal;
-  font-size: 36px;
-  line-height: 1;
-  margin: 0;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 1;
+    margin: 0;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 button {
-  font-weight: 800;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  margin: 0;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    margin: 0;
 }
 
-a, a:hover, a:visited {
-  all: unset;
-  cursor: pointer;
+a,
+a:hover,
+a:visited {
+    all: unset;
+    cursor: pointer;
 }
 
 .container {
-  display: flex;
-  margin: 0 auto;
-  max-width: 1440px;
-  padding-left: 58px;
-  padding-right: 58px;
-  flex-direction: column;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding-left: 58px;
+    padding-right: 58px;
+    flex-direction: column;
 }
 
 #map {
-  width: 764px;
-  height: 659px;
+    width: 764px;
+    height: 659px;
 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
 }
 
 /* ymaps */
 canvas {
-  border-radius: 50px;
+    border-radius: 50px;
 }
 
 marker {
-  top: -27.5px;
-  left: -27.5px;
+    top: -27.5px;
+    left: -27.5px;
 
-  position: relative;
+    position: relative;
 }
 
 marker img {
-  width: 55px;
-  height: 55px;
+    width: 55px;
+    height: 55px;
 }
