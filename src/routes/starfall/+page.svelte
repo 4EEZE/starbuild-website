@@ -99,7 +99,7 @@
     </div>
 </header>
 
-<main style="padding:0 58px">
+<main>
     <div class="building_schemes">
         <img src="/starfall_isometric_plan.webp" alt="isometric building" />
         <img src="/apartment_plan_starfall.webp" alt="apartment scheme" />
@@ -218,6 +218,14 @@
 </main>
 
 <style>
+    .design_aspects,
+    .building_schemes {
+        max-width: 1440px;
+        padding-left: 58px;
+        padding-right: 58px;
+        margin: 0 auto;
+    }
+
     .hero {
         margin: 0 auto;
         display: flex;

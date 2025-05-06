@@ -35,10 +35,7 @@
             </p>
             <img src="/scroll_arrow.svg" alt="scroll" />
         </div>
-        <div
-            class="wallpaper_bonus"
-            style="padding: 0 58px; padding-top: 100px;"
-        >
+        <div class="wallpaper_bonus" style="padding-top: 100px;">
             <h1 style="color: white;">Упс...</h1>
             <p style="color: white;">
                 Ничего страшного, такое бывает. В подарок возьми наши авторские
@@ -165,6 +162,14 @@
 </div>
 
 <style>
+    main,
+    footer {
+        max-width: 1440px;
+        padding-left: 58px;
+        padding-right: 58px;
+        margin: 0 auto;
+    }
+
     @keyframes blink {
         0%,
         100% {
@@ -288,7 +293,6 @@
 
     footer {
         margin-top: 200px;
-        padding: 0 58px;
 
         color: white;
         font-weight: 800;

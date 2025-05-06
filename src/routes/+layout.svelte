@@ -6,7 +6,7 @@
 
 {@render children()}
 
-<footer>
+<footer style="padding-top: 100px;">
     <div class="contact_info_and_disclaimer">
         <div class="achievements_and_contact_info_wrapper">
             <div class="contact_info">
@@ -85,13 +85,17 @@
 </footer>
 
 <style>
-    footer {
-        margin-top: 200px;
-        padding: 0 58px;
-
+    .contact_info_and_disclaimer {
         color: black;
         font-weight: 800;
         padding-bottom: 100px;
+
+        display: flex;
+        margin: 0 auto;
+        max-width: 1440px;
+        padding-left: 58px;
+        padding-right: 58px;
+        flex-direction: column;
     }
 
     .contact_info {
