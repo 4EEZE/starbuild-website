@@ -94,11 +94,6 @@
         position: relative;
         height: 100%;
         width: 100%;
-
-        max-width: 1440px;
-        padding-left: 58px;
-        padding-right: 58px;
-        margin: 0 auto;
     }
 
     :global(.project_click_slider) {

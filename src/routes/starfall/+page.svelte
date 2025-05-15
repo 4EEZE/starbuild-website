@@ -99,141 +99,147 @@
     </div>
 </header>
 
-<main>
-    <div class="building_schemes">
-        <img src="/starfall_isometric_plan.webp" alt="isometric building" />
-        <img src="/apartment_plan_starfall.webp" alt="apartment scheme" />
-    </div>
-    <div class="design_aspects">
-        <div class="design_aspects_card">
-            <div class="image_wrapper">
-                <img src="/starfall_2.png" alt="starfall room" />
-            </div>
-            <div class="options">
-                {#if active_options === 0}
-                    <button
-                        class="options_button"
-                        aria-label="add option button"
-                        onclick={() => ui_steps("options_button")}
-                        in:blur={{ duration: 300, amount: 10 }}
-                        out:blur={{ duration: 300, amount: 10 }}
-                    >
-                        <img src="/plus.svg" alt="add option" />
-                        <h4>ДОБАВИТЬ ОПЦИЮ</h4>
-                    </button>
-                {:else if active_options === 1}
-                    <div
-                        class="options_cards"
-                        in:blur={{ duration: 600, amount: 10 }}
-                        out:blur={{ duration: 300, amount: 10 }}
-                    >
-                        <div class="options_card">
-                            <Canvas dpr={1}>
-                                <Scene model={"/server_model/scene.gltf"} />
-                            </Canvas>
-                            <div class="options_card_buttons">
-                                <button
-                                    class="option_card_add_button"
-                                    aria-label="add option"
-                                    ><img
-                                        src="/plus_white.svg"
-                                        alt="add"
-                                    /></button
-                                >
-                                <button
-                                    class="option_card_info_button"
-                                    aria-label="info button"
-                                    ><img src="/info.svg" alt="info" /></button
-                                >
+<div class="container">
+    <main>
+        <div class="building_schemes">
+            <img src="/starfall_isometric_plan.webp" alt="isometric building" />
+            <img src="/apartment_plan_starfall.webp" alt="apartment scheme" />
+        </div>
+        <div class="design_aspects">
+            <div class="design_aspects_card">
+                <div class="image_wrapper">
+                    <img src="/starfall_2.png" alt="starfall room" />
+                </div>
+                <div class="options">
+                    {#if active_options === 0}
+                        <button
+                            class="options_button"
+                            aria-label="add option button"
+                            onclick={() => ui_steps("options_button")}
+                            in:blur={{ duration: 300, amount: 10 }}
+                            out:blur={{ duration: 300, amount: 10 }}
+                        >
+                            <img src="/plus.svg" alt="add option" />
+                            <h4>ДОБАВИТЬ ОПЦИЮ</h4>
+                        </button>
+                    {:else if active_options === 1}
+                        <div
+                            class="options_cards"
+                            in:blur={{ duration: 600, amount: 10 }}
+                            out:blur={{ duration: 300, amount: 10 }}
+                        >
+                            <div class="options_card">
+                                <Canvas dpr={1}>
+                                    <Scene model={"/server_model/scene.gltf"} />
+                                </Canvas>
+                                <div class="options_card_buttons">
+                                    <button
+                                        class="option_card_add_button"
+                                        aria-label="add option"
+                                        ><img
+                                            src="/plus_white.svg"
+                                            alt="add"
+                                        /></button
+                                    >
+                                    <button
+                                        class="option_card_info_button"
+                                        aria-label="info button"
+                                        ><img
+                                            src="/info.svg"
+                                            alt="info"
+                                        /></button
+                                    >
+                                </div>
+                            </div>
+                            <div class="options_card">
+                                <Canvas dpr={1}>
+                                    <Scene
+                                        model={"/yandex_station_model/scene.gltf"}
+                                    />
+                                </Canvas>
+                                <div class="options_card_buttons">
+                                    <button
+                                        class="option_card_add_button"
+                                        aria-label="add option"
+                                        ><img
+                                            src="/plus_white.svg"
+                                            alt="add"
+                                        /></button
+                                    >
+                                    <button
+                                        class="option_card_info_button"
+                                        aria-label="info button"
+                                        ><img
+                                            src="/info.svg"
+                                            alt="info"
+                                        /></button
+                                    >
+                                </div>
+                            </div>
+                            <div class="options_card">
+                                <Canvas dpr={1}>
+                                    <Scene model={"/vacuum_robot_model.gltf"} />
+                                </Canvas>
+                                <div class="options_card_buttons">
+                                    <button
+                                        class="option_card_add_button"
+                                        aria-label="add option"
+                                        ><img
+                                            src="/plus_white.svg"
+                                            alt="add"
+                                        /></button
+                                    >
+                                    <button
+                                        class="option_card_info_button"
+                                        aria-label="info button"
+                                        ><img
+                                            src="/info.svg"
+                                            alt="info"
+                                        /></button
+                                    >
+                                </div>
+                            </div>
+                            <div class="options_card">
+                                <Canvas dpr={1}>
+                                    <Scene
+                                        model={"/buff_steve_model/scene.gltf"}
+                                    />
+                                </Canvas>
+                                <div class="options_card_buttons">
+                                    <button
+                                        class="option_card_add_button"
+                                        aria-label="add option"
+                                        ><img
+                                            src="/plus_white.svg"
+                                            alt="add"
+                                        /></button
+                                    >
+                                    <button
+                                        class="option_card_info_button"
+                                        aria-label="info button"
+                                        ><img
+                                            src="/info.svg"
+                                            alt="info"
+                                        /></button
+                                    >
+                                </div>
                             </div>
                         </div>
-                        <div class="options_card">
-                            <Canvas dpr={1}>
-                                <Scene
-                                    model={"/yandex_station_model/scene.gltf"}
-                                />
-                            </Canvas>
-                            <div class="options_card_buttons">
-                                <button
-                                    class="option_card_add_button"
-                                    aria-label="add option"
-                                    ><img
-                                        src="/plus_white.svg"
-                                        alt="add"
-                                    /></button
-                                >
-                                <button
-                                    class="option_card_info_button"
-                                    aria-label="info button"
-                                    ><img src="/info.svg" alt="info" /></button
-                                >
-                            </div>
-                        </div>
-                        <div class="options_card">
-                            <Canvas dpr={1}>
-                                <Scene model={"/vacuum_robot_model.gltf"} />
-                            </Canvas>
-                            <div class="options_card_buttons">
-                                <button
-                                    class="option_card_add_button"
-                                    aria-label="add option"
-                                    ><img
-                                        src="/plus_white.svg"
-                                        alt="add"
-                                    /></button
-                                >
-                                <button
-                                    class="option_card_info_button"
-                                    aria-label="info button"
-                                    ><img src="/info.svg" alt="info" /></button
-                                >
-                            </div>
-                        </div>
-                        <div class="options_card">
-                            <Canvas dpr={1}>
-                                <Scene model={"/buff_steve_model/scene.gltf"} />
-                            </Canvas>
-                            <div class="options_card_buttons">
-                                <button
-                                    class="option_card_add_button"
-                                    aria-label="add option"
-                                    ><img
-                                        src="/plus_white.svg"
-                                        alt="add"
-                                    /></button
-                                >
-                                <button
-                                    class="option_card_info_button"
-                                    aria-label="info button"
-                                    ><img src="/info.svg" alt="info" /></button
-                                >
-                            </div>
-                        </div>
-                    </div>
-                {/if}
+                    {/if}
+                </div>
             </div>
         </div>
-    </div>
-    <ProjectClickSlider />
-</main>
+        <ProjectClickSlider />
+    </main>
+</div>
 
 <style>
-    .design_aspects,
-    .building_schemes {
-        max-width: 1440px;
-        padding-left: 58px;
-        padding-right: 58px;
-        margin: 0 auto;
-    }
-
     .hero {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* max-width: 1440px;
-    max-height: 807px; */
 
         background-image: url("/dark_starfall.png"), url("/starfall_deco.svg");
 
@@ -403,10 +409,11 @@
     }
 
     .options_button h4 {
-        font-size: 36px;
+        font-size: 24px;
         color: rgba(206, 206, 206, 1);
         margin-top: 25px;
         text-align: center;
+        font-weight: 800;
     }
 
     .options_cards {
@@ -434,7 +441,7 @@
     .option_card_add_button {
         position: absolute;
         width: calc(100% - 20px);
-        height: fit-content;
+        height: 100%;
         bottom: 0;
         border-radius: 30px;
         margin: 10px;
@@ -450,7 +457,8 @@
     }
 
     .option_card_add_button img {
-        margin: 10px;
+        height: 100%;
+        padding: 10px;
     }
 
     .options_card:hover .option_card_add_button {
@@ -459,7 +467,7 @@
     }
 
     .options_card_buttons:hover .option_card_add_button {
-        width: calc(100% - 86px);
+        width: calc(100% - 38%);
     }
 
     .option_card_add_button:hover + .option_card_info_button,
@@ -480,7 +488,7 @@
     }
 
     .option_card_info_button {
-        height: 92px;
+        height: 100%;
         width: calc(100% - 20px);
         text-align: right;
         left: 0;
@@ -509,12 +517,14 @@
         height: fit-content;
         position: absolute;
         bottom: 0;
+        height: 25%;
     }
 
     .option_card_info_button img {
         visibility: hidden;
         opacity: 0;
         transition: all 0.2s ease-in-out;
+        height: 100%;
     }
 
     /*

@@ -4,9 +4,6 @@
 
     import Slider from "../components/We_have_slider.svelte";
     import Map from "../components/Map.svelte";
-
-    let background_slide = $state(0);
-    const speed = 0.3;
 </script>
 
 <svelte:head>
@@ -17,7 +14,7 @@
     <div class="hero" id="hero">
         <div class="container">
             <div class="logo">
-                <img src="/logo with deco.svg" alt="Starbuild" />
+                <img src="/test_logo.svg" alt="Starbuild" />
             </div>
         </div>
     </div>
@@ -193,18 +190,16 @@
         display: flex;
         background-image: url("/Grid.svg");
         background-repeat: repeat-x;
-        background-size: auto 60vh;
+        background-size: 90vw;
         background-position: center;
-        background-position: background_slide;
         overflow: hidden;
-        max-width: 100wv;
 
         animation: slideBackground 60s linear infinite;
     }
 
     .logo img {
-        margin-top: 3%;
-        height: 100%;
+        width: 100%;
+        height: auto;
     }
 
     .logo {
@@ -283,9 +278,10 @@
     }
 
     .project_info h3 {
-        margin-left: 22px;
+        margin: 0 auto;
         margin-top: 27px;
 
+        text-align: center;
         color: rgb(140, 140, 140);
     }
 
@@ -537,16 +533,6 @@
         position: absolute;
         right: 28px;
     }
-
-    /*
-    .promote h1 {
-    background-image: url('/src/assets/innopolis_gradient.gif');
-    background-size: 110% auto;
-    background-position: 10% 10%;
-    background-clip: text;
-    color: transparent;
-    }
-    */
 
     @keyframes slideBackground {
         from {
